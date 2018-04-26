@@ -1,0 +1,30 @@
+<import src="/dist/noticebar/index.wxml" />
+<import src="/dist/loadmore/index.wxml" />
+
+<template is="zan-noticebar" data="{{ ...movable, componentId: 'movable'  }}"></template>
+
+<view class="container">
+ <view>
+  <wxc-dialog confirm-color="#3CC51F" cancel-color="#E6423F" class="wxc-dialog" title="输入房号" content="没有？赶快创建一个吧~" confirm-text="确定" cancel-text="取消"  bindconfirm="onConfirm" bindcancel="onCancel">
+    <input maxlength='4' value="{{houseCode}}" bindinput="inputChange" name="houseCode" class="input" />
+  </wxc-dialog>
+  </view>
+
+  <view class="zan-row" style='margin-top:120rpx'>
+    <view class="zan-col zan-col-12 zan-col-offset-6">
+      <view class="doc-title zan-hairline--bottom">
+        {{text}}
+      </view>
+    </view>
+  </view>
+
+  <view class="weui-cell__hd" style="position: relative;margin:60rpx 170rpx;">
+    <button bind:tap="btnOnClick" class="weui-btn" type="primary">O(∩_∩)O</button>
+    <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">点我传送</view>
+  </view>
+ <template is="zan-loadmore" data="{{ nomore: true }}" />
+    <view class="weui-cell__hd" style="position: relative;margin:15rpx 170rpx;">
+    <button bindtap="showDialog" class="weui-btn" type="primary">查看分享</button>
+  </view>
+
+</view>

@@ -1,0 +1,8 @@
+<!--pages/user/scancode/index.wxml-->
+
+<view class='container'>
+  <view class="doc-title zan-hairline--bottom">扫码取图</view>
+
+  <wxc-abnor title="您可以通过扫PC端的二维码访问房间内容" tip="通过https://wx.coderr.cn上传图片" button="点我扫码" bind:abnortap="onAbnorTap" type="REQUEST_ERROR"></wxc-abnor>
+
+</view>

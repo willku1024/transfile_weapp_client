@@ -1,0 +1,37 @@
+
+<import src="/dist/loadmore/index.wxml" />
+
+<import src="/dist/steps/index.wxml" />
+
+<view class="container">
+
+  <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd">
+        <template is="zan-steps" data="{{ type: 'horizon', hasDesc: true, steps: steps3 }}"></template>
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class="zan-row" style='margin-top:150rpx'>
+    <view class="zan-col zan-col-6 zan-col-offset-9">
+      <view class="icon-box">
+        <icon type="success" size="93"></icon>
+      </view>
+    </view>
+  </view>
+  <template is="zan-loadmore" data="{{ nomore: true }}" />
+
+
+  <view class="zan-cell">
+    <view class="zan-cell__bd textinfo">
+      <view class="zan-font-13 zan-c-dark"> 您现在可以通过在PC端访问
+        <view class="zan-font-bold zan-font-16 zan-c-green">https://wx.coderr.cn</view>
+        输入房号:
+        <view class="zan-font-bold zan-font-16 zan-c-green">{{houseCode}}</view>查看、获取图片。</view>
+
+    </view>
+  </view>
+</view>

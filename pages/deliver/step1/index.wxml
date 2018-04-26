@@ -1,0 +1,62 @@
+<import src="/dist/steps/index.wxml" />
+
+
+<view class="container">
+
+  <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd">
+        <template is="zan-steps" data="{{ type: 'horizon', hasDesc: true, steps: steps }}"></template>
+      </view>
+    </view>
+  </view>
+
+  <form bindsubmit="formSubmit" report-submit="true"bindreset="formReset">
+    <view class="form">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">房间号码</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input disabled="{{disabled}}" value="{{inputValue}}" name="houseCode" maxlength="4" type="number" focus="{{true}}" class="weui-input" placeholder="{{placeholder}}" />
+          </view>
+          <view class="weui-cell__ft" bind:tap="autoGetCode">
+            <view class="weui-vcode-btn" form-type='reset'>{{disabledText}}</view>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_select">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label" >保留时间</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="bindPickerChange" value="{{timeIndex}}" range="{{time}}">
+              <view class="weui-select weui-select_in-select-after">{{time[timeIndex]}}</view>
+            </picker>
+          </view>
+        </view>
+
+
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">是否公开</view>
+          <view class="weui-cell__ft">
+            <switch bindchange="bindSwitchChange" checked />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="box">
+      <button formType="submit" class="weui-btn" disabled='{{btnDisabled}}' type="primary" plain="true">确认创建</button>
+    </view>
+
+    <view class="box">
+      <view class="weui-cells__tips">Tip1：建议自定义房间，以方便记忆</view>
+      <view class="weui-cells__tips">Tip2：公开的房间，他人由房号查看</view>
+      <view class="weui-cells__tips">Tip3：可通过"关于我"，查看上传记录</view>
+    </view>
+  </form>
+
+
+
+</view>

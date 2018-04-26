@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<view class="container box">
+  <view class="userinfo ">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bind:getuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <view class="weui-cells__title">过期记录自动清理，最长保存7天</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_access" data-redirect="../uploadlog/index" bind:tap="listOnClick">
+      <view class="weui-cell__bd">
+        <view style="display: inline-block; vertical-align: middle">上传记录</view>
+        <!-- <view class="weui-badge" style="margin-left: 5px;">8</view> -->
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">详细信息</view>
+    </view>
+     <view class="weui-cell weui-cell_access"  data-redirect="../scancode/index" bind:tap="listOnClick">
+      <view class="weui-cell__bd">
+        <view style="display: inline-block; vertical-align: middle">扫码取图</view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view> 
+
+  </view>
+
+  <view class="weui-cells__title">
+    <text>\n</text>
+  </view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_access" data-redirect="../about/index" bind:tap="listOnClick">
+      <view class="weui-cell__bd">
+        <view style="display: inline-block; vertical-align: middle">版本记录</view>
+        <block wx:if="{{aboutDot}}">
+          <view class="weui-badge" style="margin-left: 5px;">New</view>
+        </block>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd" data-redirect="../feedback/index" bind:tap="listOnClick">意见反馈</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+        <!-- <view style="display: inline-block;vertical-align:middle; font-size: 17px;">详细信息</view>  -->
+
+        <block wx:if="{{feedBackDot}}">
+          <view class="weui-badge weui-badge_dot" style="margin-left: 5px;margin-right: 5px;"></view>
+        </block>
+
+      </view>
+    </view>
+  </view>
+
+  <view class="footer">
+    <view class="weui-footer weui-footer_fixed-bottom">
+      <view class="weui-footer__text">Power By x_jwei@163.com</view>
+    </view>
+  </view>
+</view>

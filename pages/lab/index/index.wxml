@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="weui-panel weui-panel_access">
+    <view class="weui-panel__hd zan-c-green">恭喜！最新的小功能都在此~</view>
+    <block wx:if="{{lab}}">
+      <view class="weui-panel__bd">
+        <navigator url="../clock/index" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="{{clock64}}" />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">
+              <view class="zan-c-gray-darker zan-font-13 zan-font-bold">待办提醒</view>
+            </view>
+            <view class="weui-media-box__desc">你把待办事项告诉我，我会定时推送消息提醒你。</view>
+          </view>
+        </navigator>
+      </view>
+    </block>
+
+    <!-- <view class="weui-panel__ft">
+                <view class="weui-cell weui-cell_access weui-cell_link">
+                    <view class="weui-cell__bd">查看更多</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </view>
+            </view> -->
+  </view>
+</view>

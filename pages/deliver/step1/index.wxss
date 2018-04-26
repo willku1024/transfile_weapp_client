@@ -1,0 +1,11 @@
+
+
+.box {
+  margin: 15px 30px;
+  padding: 10px; 
+  text-align: left;
+}
+
+.form{
+    margin-top: 15px;
+}

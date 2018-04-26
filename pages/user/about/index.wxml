@@ -1,0 +1,20 @@
+<!--pages/user/upload/index.wxml-->
+
+<view class='container'>
+  <view class="doc-title zan-hairline--bottom">版本记录</view>
+  <view class="weui-article">
+    <block wx:for="{{infos}}" wx:key="*this" wx:for-index="title" wx:for-item="content">
+      <view class="weui-article__section">
+        <view class="weui-article__title  zan-font-bold zan-c-black">
+        {{title}}
+        </view>
+        <view class="weui-article__section">
+          <block wx:for="{{content}}" wx:key="*this">
+            <view class="zan-c-gray-darker weui-article__h3">({{index+1}}) {{item}}</view>
+          </block>
+        </view>
+      </view>
+    </block>
+
+  </view>
+</view>

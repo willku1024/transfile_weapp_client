@@ -1,0 +1,27 @@
+
+<import src="/dist/toptips/index.wxml" />
+<template is="zan-toptips" data="{{ zanTopTips }}"></template>
+
+<view class="container">
+  <view class="doc-title zan-hairline--bottom">意见反馈</view>
+
+
+  <form bindsubmit="formSubmit">
+    <view class="zan-panel-title">主题</view>
+    <view class="zan-panel">
+      <input name="subject" placeholder="这里写反馈的相关主题..." style="padding: 15px;"></input>
+    </view>
+
+    <view class="zan-panel-title">内容</view>
+    <view class="textarea-wrp">
+      <textarea name="content" placeholder="这里写反馈的具体内容..." auto-height />
+    </view>
+
+    <view class="weui-cell__hd" style="position: relative;margin:100rpx 170rpx;">
+      <button formType="submit" type="primary" disabled='{{loading}}' loading="{{loading}}" style="padding:0 30rpx">提交反馈</button>
+    </view>
+
+  </form>
+
+
+</view>

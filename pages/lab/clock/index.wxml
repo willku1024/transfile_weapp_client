@@ -1,0 +1,76 @@
+<import src="/dist/toptips/index.wxml" />
+
+<template is="zan-toptips" data="{{ zanTopTips }}"></template> 
+<view class="container">
+  <view class="doc-title zan-hairline--bottom">待办提醒</view>
+
+  <form bindsubmit="formSubmit" report-submit='true'>
+
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">日程主题</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input name="subject" class="weui-input" placeholder="必填" />
+        </view>
+      </view>
+    </view>
+    <view class="zan-panel-title"> </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">日程地点</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input name="position" class="weui-input" placeholder="非必填" />
+        </view>
+      </view>
+    </view>
+
+
+    <view class="zan-panel-title"> </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">选择时间</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="time" value="{{starttime}}" start="00:00" end="24:00" bindchange="bindTimeChange">
+            <view class="weui-input">{{time}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <view class="zan-panel-title"> </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">选择日期</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value="{{startdate}}" start="{{startdate}}" end="2018-12-31" bindchange="bindDateChange">
+            <view class="weui-input">{{date}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <view class="zan-panel-title"> </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <textarea name="content" placeholder="这里写日程的内容或备注..." auto-height />
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cell__hd" style="position: relative;margin:100rpx 170rpx;">
+       <button formType="submit"  type="primary" loading="{{loading}}" style="padding:0 30rpx">提交</button> 
+    </view>
+
+  </form>
+
+
+</view>

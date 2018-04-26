@@ -1,0 +1,6 @@
+<view class="container" bind:touchmove="goToIndex" bind:tap="goToIndex">
+
+  <block wx:if="{{show}}">
+    <wxc-abnor title="{{title}}" tip="{{tip}}" type="MESSAGE"></wxc-abnor>
+  </block>
+</view>

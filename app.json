@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/deliver/index/index",
+    "pages/deliver/step1/index",
+    "pages/deliver/step2/index",
+    "pages/deliver/step3/index",
+    "pages/share/index/index",
+    "pages/share/jump/index",
+    "pages/lab/index/index",
+    "pages/lab/clock/index",
+    "pages/user/index/index",
+    "pages/user/feedback/index",
+    "pages/user/about/index",
+    "pages/user/scancode/index",
+    "pages/user/uploadlog/index"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "图片轻松传",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 22920
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/deliver/index/index",       
+        "iconPath": "icons/link.png",
+        "selectedIconPath": "icons/link_g.png",
+        "text": "传送门"
+      },
+      {
+        "pagePath": "pages/lab/index/index",
+        "iconPath": "icons/light.png",
+        "selectedIconPath": "icons/light_g.png",
+        "text": "实验室"
+      },
+      {
+        "pagePath": "pages/user/index/index",
+        "iconPath": "icons/account.png",
+        "selectedIconPath": "icons/account_g.png",
+        "text": "关于我"
+      }
+    ]
+  }
+}

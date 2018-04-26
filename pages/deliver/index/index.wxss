@@ -1,0 +1,7 @@
+ .input {
+  /* border: 1px solid #cccccc; */
+  border: 1px solid #999;
+  margin-bottom: 20px;
+  padding: 5px;
+
+} 
